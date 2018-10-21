@@ -64,4 +64,31 @@ http://yamaryu0508.hatenablog.com/entry/2014/12/02/102648
 ## リンク
 
 * [効果音ラボ](https://soundeffect-lab.info)  
-音声ファイルを使用させていただいております。s
+音声ファイルを使用させていただいております。
+
+## よく使うコマンド等
+
+### SDカードバックアップ手順（Mac用）
+
+SDカードをMacに挿す。  
+ドライブ番号を調べる。  
+/Volumes/boot が /dev/dusk4s1なので/dev/disk4がSDカードである。
+
+```
+$ df
+Filesystem    512-blocks       Used Available Capacity iused               ifree %iused  Mounted on
+/dev/disk4s1       86872      44839     42033    52%       0                   0  100%   /Volumes/boot
+```
+
+バックアップを実行する。  
+１時間弱所要する。
+
+```
+$ sudo dd if=/dev/disk4 | gzip > backup`date +%Y%m%d`.img.gz
+```
+
+### SDカード書き込み手順（Mac用）
+
+Etcherというツールを使う。（無料）  
+上記でバックアップしたファイルと、書き込み先のSDカードを指定して実行する。  
+30分程度所要する。
