@@ -17,7 +17,7 @@ https://github.com/YGFYHD2018/3d_led_cube_go
 * SSH有効  
 sshという名称の空ファイルを作る
 * sshアクセス  
-ラズパイをイーサネットケーブルでPCと同じネットワークに接続する(DHCPサーバー必要)  
+ラズパイをイーサネットケーブルでPCと同じネットワークに接続する(DHCPサーバー必要)  
 ラズパイを起動する  
 １分後くらいにPCのターミナルからsshアクセスする  
 `ssh pi@raspberrypi.local`  
@@ -52,7 +52,7 @@ http://yamaryu0508.hatenablog.com/entry/2014/12/02/102648
 * pythonのライブラリをインストール  
 `sudo apt-get install libopencv-dev python-opencv python-dev python-picamera`
 * 本プログラム取得  
-`git clone https://github.com/hiroshi-mikuriya/block_identifier`
+`git clone https://github.com/YGFYHD2018/block_identifier`
 * 自動起動設定  
 `sudo vim /etc/rc.local`  
 以下、追記  
@@ -72,7 +72,8 @@ http://yamaryu0508.hatenablog.com/entry/2014/12/02/102648
 
 SDカードをMacに挿す。  
 ドライブ番号を調べる。  
-/Volumes/boot が /dev/dusk4s1なので/dev/disk4がSDカードである。
+/Volumes/boot がラズパイのSDカードである。  
+ディスク番号を確認する。（/dev/disk4）
 
 ```
 $ df
