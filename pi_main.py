@@ -12,13 +12,13 @@ def has_object(blocks):
       return True
   return False
 
-audigo.play('info-girl1_info-girl1-datawoyomikondeimasu1.mp3')
+audigo.play('info-girl1-datawoyomikondeimasu1.mp3')
 
 btn = button(24)
 opt = block.option(0.9)
 cam = camera((opt.camera_width, opt.camera_height))
 
-audigo.play('info-girl1_info-girl1-kidoushimashita1.mp3')
+audigo.play('info-girl1-kidoushimashita1.mp3')
 
 try:
   while True:
@@ -32,10 +32,10 @@ try:
       blocks = block.calc(img, opt)
       # block.show_blocks(img, blocks)
       if has_object(blocks):
-        audigo.play('./sound/info-girl1-start1.mp3')
+        audigo.play('info-girl1-start1.mp3')
         sender.post(blocks)
       else:
-        audigo.play('./sound/info-girl1-bubu1.mp3')
+        audigo.play('info-girl1-bubu1.mp3')
     except cv2.error as e:
       print(e)
 except KeyboardInterrupt:
